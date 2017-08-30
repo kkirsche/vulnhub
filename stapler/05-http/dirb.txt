@@ -1,0 +1,26 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb.txt
+START_TIME: Wed Aug 30 13:01:02 2017
+URL_BASE: http://10.10.10.148/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+OPTION: Not Stoping on warning messages
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://10.10.10.148/ ----
++ http://10.10.10.148/.bashrc (CODE:200|SIZE:3771)
++ http://10.10.10.148/.profile (CODE:200|SIZE:675)
+
+(!) FATAL: Too many errors connecting to host
+    (Possible cause: EMPTY REPLY FROM SERVER)
+
+-----------------
+END_TIME: Wed Aug 30 13:01:11 2017
+DOWNLOADED: 2400 - FOUND: 2
