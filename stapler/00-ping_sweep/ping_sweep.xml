@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Tue Aug 29 23:31:55 2017 as: nmap -sn -oA ping_sweep 10.10.10.0/24 -->
+<nmaprun scanner="nmap" args="nmap -sn -oA ping_sweep 10.10.10.0/24" start="1504063915" startstr="Tue Aug 29 23:31:55 2017" version="7.60" xmloutputversion="1.04">
+<verbose level="0"/>
+<debugging level="0"/>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.10.1" addrtype="ipv4"/>
+<address addr="00:50:56:C0:00:02" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<times srtt="215" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.10.2" addrtype="ipv4"/>
+<address addr="00:50:56:F6:2F:82" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<times srtt="187" rttvar="3906" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.10.148" addrtype="ipv4"/>
+<address addr="00:0C:29:CD:C6:AF" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<times srtt="-99497" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.10.254" addrtype="ipv4"/>
+<address addr="00:50:56:E3:5D:BB" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<times srtt="-100462" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="10.10.10.141" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</host>
+<runstats><finished time="1504063921" timestr="Tue Aug 29 23:32:01 2017" elapsed="5.28" summary="Nmap done at Tue Aug 29 23:32:01 2017; 256 IP addresses (5 hosts up) scanned in 5.28 seconds" exit="success"/><hosts up="5" down="251" total="256"/>
+</runstats>
+</nmaprun>

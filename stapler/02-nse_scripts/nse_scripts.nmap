@@ -1,0 +1,77 @@
+# Nmap 7.60 scan initiated Wed Aug 30 07:54:27 2017 as: nmap --script=default -oA nse_scripts --script=default -sS -sU -p137,21,22,53,80,139,666,3306 10.10.10.148
+Nmap scan report for 10.10.10.148
+Host is up (0.00081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV failed: 550 Permission denied.
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 10.10.10.141
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 4
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp   open   ssh
+| ssh-hostkey: 
+|   2048 81:21:ce:a1:1a:05:b1:69:4f:4d:ed:80:28:e8:99:05 (RSA)
+|   256 5b:a5:bb:67:91:1a:51:c2:d3:21:da:c0:ca:f0:db:9e (ECDSA)
+|_  256 6d:01:b7:73:ac:b0:93:6f:fa:b9:89:e6:ae:3c:ab:d3 (EdDSA)
+53/tcp   open   domain
+80/tcp   open   http
+|_http-title: 404 Not Found
+137/tcp  closed netbios-ns
+139/tcp  open   netbios-ssn
+666/tcp  open   doom
+3306/tcp open   mysql
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.7.12-0ubuntu1
+|   Thread ID: 7
+|   Capabilities flags: 63487
+|   Some Capabilities: Support41Auth, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolOld, SupportsCompression, ConnectWithDatabase, Speaks41ProtocolNew, FoundRows, LongColumnFlag, SupportsTransactions, ODBCClient, InteractiveClient, IgnoreSigpipes, SupportsLoadDataLocal, LongPassword, DontAllowDatabaseTableColumn, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: \x17N\x0B]b\x1AtM\x0DE\x1C\x15PhGrWkiY
+|_  Auth Plugin Name: 88
+21/udp   closed ftp
+22/udp   closed ssh
+53/udp   open   domain
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.75
+|_dns-recursion: Recursion appears to be enabled
+80/udp   closed http
+137/udp  open   netbios-ns
+139/udp  closed netbios-ssn
+666/udp  closed doom
+3306/udp closed mysql
+MAC Address: 00:0C:29:CD:C6:AF (VMware)
+
+Host script results:
+|_nbstat: NetBIOS name: RED, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.9-Ubuntu)
+|   Computer name: red
+|   NetBIOS computer name: RED\x00
+|   Domain name: \x00
+|   FQDN: red
+|_  System time: 2017-08-30T12:54:30+01:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2017-08-30 07:54:30
+|_  start_date: 1600-12-31 19:03:58
+
+# Nmap done at Wed Aug 30 07:55:00 2017 -- 1 IP address (1 host up) scanned in 32.64 seconds

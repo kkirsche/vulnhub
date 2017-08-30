@@ -1,0 +1,7 @@
+# Nmap 7.60 scan initiated Tue Aug 29 23:31:55 2017 as: nmap -sn -oA ping_sweep 10.10.10.0/24
+Host: 10.10.10.1 ()	Status: Up
+Host: 10.10.10.2 ()	Status: Up
+Host: 10.10.10.148 ()	Status: Up
+Host: 10.10.10.254 ()	Status: Up
+Host: 10.10.10.141 ()	Status: Up
+# Nmap done at Tue Aug 29 23:32:01 2017 -- 256 IP addresses (5 hosts up) scanned in 5.28 seconds

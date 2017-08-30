@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Wed Aug 30 07:54:27 2017 as: nmap --script=default -oA nse_scripts --script=default -sS -sU -p137,21,22,53,80,139,666,3306 10.10.10.148
+Host: 10.10.10.148 ()	Status: Up
+Host: 10.10.10.148 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 53/open/tcp//domain///, 80/open/tcp//http///, 137/closed/tcp//netbios-ns///, 139/open/tcp//netbios-ssn//Samba smbd 4.3.9-Ubuntu/, 666/open/tcp//doom///, 3306/open/tcp//mysql///, 21/closed/udp//ftp///, 22/closed/udp//ssh///, 53/open/udp//domain///, 80/closed/udp//http///, 137/open/udp//netbios-ns///, 139/closed/udp//netbios-ssn///, 666/closed/udp//doom///, 3306/closed/udp//mysql///
+# Nmap done at Wed Aug 30 07:55:00 2017 -- 1 IP address (1 host up) scanned in 32.64 seconds

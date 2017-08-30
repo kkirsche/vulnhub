@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Wed Aug 30 07:54:27 2017 as: nmap -&#45;script=default -oA nse_scripts -&#45;script=default -sS -sU -p137,21,22,53,80,139,666,3306 10.10.10.148 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script=default -oA nse_scripts -&#45;script=default -sS -sU -p137,21,22,53,80,139,666,3306 10.10.10.148" start="1504094067" startstr="Wed Aug 30 07:54:27 2017" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="8" services="21-22,53,80,137,139,666,3306"/>
+<scaninfo type="udp" protocol="udp" numservices="8" services="21-22,53,80,137,139,666,3306"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1504094067" endtime="1504094100"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.10.148" addrtype="ipv4"/>
+<address addr="00:0C:29:CD:C6:AF" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" method="table" conf="3"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;Can&apos;t get directory listing: PASV failed: 550 Permission denied."/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 10.10.10.141&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 10.10.10.141&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/><script id="ssh-hostkey" output="&#xa;  2048 81:21:ce:a1:1a:05:b1:69:4f:4d:ed:80:28:e8:99:05 (RSA)&#xa;  256 5b:a5:bb:67:91:1a:51:c2:d3:21:da:c0:ca:f0:db:9e (ECDSA)&#xa;  256 6d:01:b7:73:ac:b0:93:6f:fa:b9:89:e6:ae:3c:ab:d3 (EdDSA)"><table>
+<elem key="bits">2048.0</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">8121cea11a05b1694f4ded8028e89905</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDc/xrBbi5hixT2B19dQilbbrCaRllRyNhtJcOzE8x0BM1ow9I80RcU7DtajyqiXXEwHRavQdO+/cHZMyOiMFZG59OCuIouLRNoVO58C91gzDgDZ1fKH6BDg+FaSz+iYZbHg2lzaMPbRje6oqNamPR4QGISNUpxZeAsQTLIiPcRlb5agwurovTd3p0SXe0GknFhZwHHvAZWa2J6lHE2b9K5IsSsDzX2WHQ4vPb+1DzDHV0RTRVUGviFvUX1X5tVFvVZy0TTFc0minD75CYClxLrgc+wFLPcAmE2C030ER/Z+9umbhuhCnLkLN87hlzDSRDPwUjWr+sNA3+7vc/xuZul</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">5ba5bb67911a51c2d321dac0caf0db9e</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNQB5n5kAZPIyHb9lVx1aU0fyOXMPUblpmB8DRjnP8tVIafLIWh54wmTFVd3nCMr1n5IRWiFeX1weTBDSjjz0IY=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">6d01b773acb0936ffab989e6ae3cabd3</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJ9wvrF4tkFMApswOmWKpTymFjkaiIoie4QD0RWOYnny</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/><script id="http-title" output="404 Not Found"><elem key="title">404 Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="137"><state state="closed" reason="reset" reason_ttl="64"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="4.3.9-Ubuntu" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="666"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="doom" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" method="table" conf="3"/><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 5.7.12-0ubuntu1&#xa;  Thread ID: 7&#xa;  Capabilities flags: 63487&#xa;  Some Capabilities: Support41Auth, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolOld, SupportsCompression, ConnectWithDatabase, Speaks41ProtocolNew, FoundRows, LongColumnFlag, SupportsTransactions, ODBCClient, InteractiveClient, IgnoreSigpipes, SupportsLoadDataLocal, LongPassword, DontAllowDatabaseTableColumn, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments&#xa;  Status: Autocommit&#xa;  Salt: \x17N\x0B]b\x1AtM\x0DE\x1C\x15PhGrWkiY&#xa;  Auth Plugin Name: 88"><elem key="Protocol">10</elem>
+<elem key="Version">5.7.12-0ubuntu1</elem>
+<elem key="Thread ID">7</elem>
+<elem key="Capabilities flags">63487</elem>
+<table key="Some Capabilities">
+<elem>Support41Auth</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>SupportsCompression</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>FoundRows</elem>
+<elem>LongColumnFlag</elem>
+<elem>SupportsTransactions</elem>
+<elem>ODBCClient</elem>
+<elem>InteractiveClient</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>LongPassword</elem>
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>SupportsAuthPlugins</elem>
+<elem>SupportsMultipleResults</elem>
+<elem>SupportsMultipleStatments</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">\x17N\x0B]b\x1AtM\x0DE\x1C\x15PhGrWkiY</elem>
+<elem key="Auth Plugin Name">88</elem>
+</script></port>
+<port protocol="udp" portid="21"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="udp" portid="22"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="udp" portid="53"><state state="open" reason="script-set" reason_ttl="0"/><service name="domain" method="table" conf="3"/><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.75"><elem key="bind.version">dnsmasq-2.75</elem>
+</script><script id="dns-recursion" output="Recursion appears to be enabled"/></port>
+<port protocol="udp" portid="80"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="64"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="666"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="doom" method="table" conf="3"/></port>
+<port protocol="udp" portid="3306"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: RED, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)"><elem key="user">&lt;unknown&gt;</elem>
+<table key="mac">
+<elem key="manuf">unknown</elem>
+<elem key="address">&lt;unknown&gt;</elem>
+</table>
+<table key="names">
+<table>
+<elem key="flags">25600</elem>
+<elem key="name">RED</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="flags">25600</elem>
+<elem key="name">RED</elem>
+<elem key="suffix">3</elem>
+</table>
+<table>
+<elem key="flags">25600</elem>
+<elem key="name">RED</elem>
+<elem key="suffix">32</elem>
+</table>
+<table>
+<elem key="flags">58368</elem>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+<elem key="suffix">1</elem>
+</table>
+<table>
+<elem key="flags">58368</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="flags">25600</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="suffix">29</elem>
+</table>
+<table>
+<elem key="flags">58368</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="suffix">30</elem>
+</table>
+</table>
+<elem key="server_name">RED</elem>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.3.9-Ubuntu)&#xa;  Computer name: red&#xa;  NetBIOS computer name: RED\x00&#xa;  Domain name: \x00&#xa;  FQDN: red&#xa;  System time: 2017-08-30T12:54:30+01:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.3.9-Ubuntu</elem>
+<elem key="server">RED\x00</elem>
+<elem key="date">2017-08-30T12:54:30+01:00</elem>
+<elem key="fqdn">red</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2017-08-30 07:54:30&#xa;  start_date: 1600-12-31 19:03:58"><elem key="date">2017-08-30 07:54:30</elem>
+<elem key="start_date">1600-12-31 19:03:58</elem>
+</script></hostscript><times srtt="810" rttvar="422" to="100000"/>
+</host>
+<runstats><finished time="1504094100" timestr="Wed Aug 30 07:55:00 2017" elapsed="32.64" summary="Nmap done at Wed Aug 30 07:55:00 2017; 1 IP address (1 host up) scanned in 32.64 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
